@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="assets\logo.png" class="img">
+
+        <div class="navbar">
+            <a routerLink="home" routerLinkActive="activeLink">HOME</a>
+            <div class="dropdown">
+
+                <button class="dropbtn">DASHBOARD
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a routerLink="collections">Collections</a>
+                </div>
+            </div>
+            <a routerLink="/">LOGOUT</a>
+        </div>
+    </div>
+    <router-outlet>
+    </router-outlet>
+
+
+
+</body>
+
+</html>

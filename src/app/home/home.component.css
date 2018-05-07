@@ -1,0 +1,117 @@
+    .header {
+        background-image: url("assets\background2.jpg");
+        width: 100%;
+        height: 100px;
+    }
+    
+    a {
+        color: red;
+    }
+    
+    .buddha {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .mark {
+        color: white;
+    }
+    
+    .space {
+        position: relative;
+        width: (width)px;
+        height: (height)px;
+    }
+    
+    .arrowleft {
+        position: absolute;
+        bottom: 0;
+        left: 0.25em;
+        width: 200px;
+        height: 250px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .arrowright {
+        position: absolute;
+        bottom: 0;
+        right: 0.05em;
+        width: 100px;
+        height: 250px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0.25em;
+        width: 250px;
+        height: 180px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .para {
+        color: white;
+        height: 80px;
+        float: left;
+        font-size: 20px;
+        margin-top: 6%;
+        text-align: left;
+    }
+    
+    .span {
+        color: crimson;
+        font-weight: bold;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0%;
+    }
+    
+    #first {
+        width: 70%;
+        float: left;
+        height: 300px;
+    }
+    
+    #second {
+        width: 30%;
+        float: left;
+        text-align: center;
+        height: 300px;
+        color: white;
+    }
+    
+    #second h1 {
+        margin-top: 0%;
+    }
+    
+    #clear {
+        clear: both;
+    }
+    
+    #second ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #second li {
+        padding: 1px;
+        background-color: goldenrod;
+        margin-bottom: 3px;
+        box-shadow: 0.1px 3px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    
+    @media screen and (min-width:360px) {
+        .arrowleft {
+            display: none;
+        }
+        .arrowright {
+            display: none;
+        }
+    }

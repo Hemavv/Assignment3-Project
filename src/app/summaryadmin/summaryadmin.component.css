@@ -1,0 +1,38 @@
+p {
+    color: white;
+    margin-left: 42%;
+    font-size: 20px;
+}
+
+body {
+    color: white;
+}
+
+.d {
+    overflow-x: auto;
+    height: 300px;
+    width: 300px;
+    float: left;
+    background-color: grey;
+    margin-left: 2%;
+}
+
+table {
+    float: left;
+    width: 300px;
+    height: 300px;
+    height: 100px;
+    border-collapse: collapse;
+    border: 10px solid white;
+    font-size: 12px;
+    background-color: #ccc;
+}
+
+td {
+    text-align: center;
+    color: darkgray;
+}
+
+th {
+    color: crimson;
+}

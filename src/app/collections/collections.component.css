@@ -1,0 +1,88 @@
+    p {
+        color: white;
+    }
+    
+    body {
+        background-image: url("assets/gallback1.jpg");
+        text-align: center;
+    }
+    
+    .gal {
+        text-align: center;
+        color: maroon;
+        transition: transform .2s;
+    }
+    
+    .gal:hover {
+        -ms-transform: scale(1.0);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.3);
+    }
+    
+    .d {
+        height: 300px;
+        width: 300px;
+        float: left;
+        background-color: grey;
+        margin-left: 2%;
+    }
+    
+    .d1 {
+        height: 300px;
+        width: 300px;
+        float: left;
+        background-color: grey;
+        margin-left: 2%;
+    }
+    
+    .text1 {
+        width: 100%;
+        height: 10%;
+        color: black;
+        background-color: white;
+        float: left;
+    }
+    
+    .rupee {
+        float: right;
+        color: red;
+        margin-top: 0%;
+    }
+    
+    .button {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        background-color: maroon;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    
+    .d {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    
+    .d:hover {
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    
+    .d1 {
+        -webkit-transition: all 0.1s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
