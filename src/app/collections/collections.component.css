@@ -2,15 +2,11 @@
         color: white;
     }
     
-    body {
-        background-image: url("assets/gallback1.jpg");
-        text-align: center;
-    }
-    
     .gal {
         text-align: center;
         color: maroon;
         transition: transform .2s;
+        margin-top: 0%;
     }
     
     .gal:hover {
@@ -20,7 +16,7 @@
     }
     
     .d {
-        height: 300px;
+        height: 240px;
         width: 300px;
         float: left;
         background-color: grey;
@@ -40,7 +36,8 @@
         height: 10%;
         color: black;
         background-color: white;
-        float: left;
+        /* float: left; */
+        text-align: center;
     }
     
     .rupee {
@@ -49,21 +46,21 @@
         margin-top: 0%;
     }
     
-    .button {
+    .gotocart {
         margin-top: 1%;
         margin-bottom: 2%;
         background-color: maroon;
-        color: black;
+        color: whitesmoke;
         cursor: pointer;
+        margin-left: 45%;
     }
     
-    .button:active {
+    .gotocart:active {
         background-color: #3e8e41;
         box-shadow: 0 5px #666;
         transform: translateY(4px);
     }
-    
-    .d {
+    /* .d {
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
@@ -77,12 +74,45 @@
         -o-transform: rotate(-10deg);
         -ms-transform: rotate(-10deg);
         transform: rotate(-10deg);
-    }
+    } */
     
-    .d1 {
-        -webkit-transition: all 0.1s ease;
+    .d {
+        -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease;
         transition: all 0.5s ease;
+    }
+    
+    .d:hover {
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.2);
+    }
+    
+    .d5 {
+        height: 300px;
+        width: 300px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    
+    .d5:hover {
+        width: 400px;
+        height: 400px;
+    }
+    
+    @media screen and (max-width:360px) {
+        img,
+        .text1,
+        .d {
+            width: 350px;
+        }
+        .text1,
+        {
+            text-align: center;
+        }
     }

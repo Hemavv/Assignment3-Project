@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AddingserviceService } from '../addingservice.service';
+import { CollectionsComponent } from '../collections/collections.component';
 
 @Component({
   selector: 'app-summaryuser',
@@ -6,33 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summaryuser.component.css']
 })
 export class SummaryuserComponent implements OnInit {
-  add={
-    name:"Hema",
-    Date:"25-04-2018",
-    Delivery:"28-04-2018",
-    Orderno:"8",
-    Image1:"Image1",
-    Image2:"Image2",
-    Image3:"Image3",
-    Image4:"Image4",
-    Image5:"Image5",
-    Image6:"Image6",
-    Image7:"Image7",
-    Image8:"Image8",
-    Rupee1:"5000",
-    Rupee2:"7000",
-    Rupee3:"7000",
-    Rupee4:"10000",
-    Rupee5:"20000",
-    Rupee6:"9000",
-    Rupee7:"4000",
-    Rupee8:"7000",
-    Total_Price:"69000"
-   
+
+  add = {
+    name: "Hema",
+    Date: "25-04-2018",
+    Delivery: "28-04-2018",
+    Orderno: "8",
   };
-  constructor() { }
+  summary: any;
+  view: any;
+  total: any;
+  constructor(private _addingservice: AddingserviceService) { }
 
   ngOnInit() {
+    this.summary = this._addingservice.show;
+    this.view = this._addingservice.servicedata;
+    this.total=this._addingservice.sumofprod();
+    console.log(this.total)
   }
 
 }

@@ -1,103 +1,61 @@
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width">
+<p>DETAILS</p>
 
-<body>
-    <div class="w3-container">
-        <p>DETAILS</p>
-        <table class="w3-table-all w3-hoverable">
-            <tr>
-                <th>NAME:</th>
-                <td>{{add.name}}</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>DATE:</th>
-                <td>{{add.Date}}</td>
-                <td></td>
-            </tr>
-            <tr>
+<table>
+    <tr>
+        <th>NAME:</th>
+        <td>{{add.name}}</td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>DATE:</th>
+        <td>{{add.Date}}</td>
+        <td></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <th>
+            ORDERS:
+        </th>
+        <td>
+            <div *ngFor="let Img of addcart">
+                <td style="color:black;">{{Img.value}}</td>
+            </div>
+        </td>
+        <td>
+            <div *ngFor="let Img of addcart">
+                <td style="color:black;">{{Img.prize}}</td>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>TOTAL:</td>
+        <td></td>
+        <td>
+            <div>
+                <td>{{total}}</td>
+            </div>
+        </td>
 
-            </tr>
-            <tr>
-                <th>
-                    ORDERS:
-                </th>
-                <td>{{add.Image1}}</td>
-                <td>{{add.Rupee1}}</td>
-            </tr>
-            <tr>
-                <th>
+    </tr>
+</table>
+<!-- </div> -->
+<script>
+    function reallySure(event) {
+        var message = 'Your Order is received\nThank you!!\nIt will be deliverd on 28/04/2018';
+        action = confirm(message) ? true : event.preventDefault();
+    }
 
-                </th>
-                <td>{{add.Image2}}</td>
-                <td>{{add.Rupee2}}</td>
-            </tr>
-            <tr>
-                <th>
-
-                </th>
-                <td>{{add.Image3}}</td>
-                <td>{{add.Rupee3}}</td>
-            </tr>
-            <tr>
-                <th>
-
-                </th>
-                <td>{{add.Image4}}</td>
-                <td>{{add.Rupee4}}</td>
-            </tr>
-            <tr>
-                <th>
-
-                </th>
-                <td>{{add.Image5}}</td>
-                <td>{{add.Rupee5}}</td>
-            </tr>
-            <tr>
-                <th>
-
-                </th>
-                <td>{{add.Image6}}</td>
-                <td>{{add.Rupee6}}</td>
-            </tr>
-            <tr>
-                <th>
-
-                </th>
-                <td>{{add.Image7}}</td>
-                <td>{{add.Rupee7}}</td>
-            </tr>
-            <tr>
-                <th>
-
-                </th>
-                <td>{{add.Image8}}</td>
-                <td>{{add.Rupee8}}</td>
-            </tr>
-            <tr>
-                <th>TOTAL PRICE</th>
-                <td></td>
-                <td>{{add.Total_Price}}</td>
-
-            </tr>
-        </table>
-        <script>
-            function reallySure(event) {
-                var message = 'Your Order is received\nThank you!!\nIt will be deliverd on 28/04/2018';
-                action = confirm(message) ? true : event.preventDefault();
-            }
-
-            function actionToFunction(event) {
-                switch (event.target.tagName.toLowerCase()) {
-                    case 'a':
-                        reallySure(event);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            document.body.addEventListener('click', actionToFunction);
-        </script>
-        <button (click)="alertMe('Your Order is received\nThank you!!\nIt will be deliverd on 28/04/2018')" class="button"><a routerLink="/summaryuser/">BUYNOW</a></button>
-    </div>
-
-</body>
+    function actionToFunction(event) {
+        switch (event.target.tagName.toLowerCase()) {
+            case 'a':
+                reallySure(event);
+                break;
+            default:
+                break;
+        }
+    }
+    document.body.addEventListener('click', actionToFunction);
+</script>
+<button (click)="alertMe('Your Order is received\nThank you!!\nIt will be deliverd on 28/04/2018')" class="button" [routerLink]="['/summaryuser']">BUYNOW</button>
