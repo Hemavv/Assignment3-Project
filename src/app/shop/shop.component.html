@@ -1,0 +1,30 @@
+<div *ngFor="let shop of adddata">
+    <table class="tab">
+        <tr>
+            <th rowspan=8>
+
+                <img src={{shop.image}} height="400" width="510" class={{shop.class}}>
+
+            </th>
+            <th>{{shop.th1}}</th>
+            <td>{{shop.td1}}</td>
+        </tr>
+        <tr>
+            <th>{{shop.th2}}</th>
+            <td>{{shop.td2}}</td>
+        </tr>
+        <tr>
+            <th>{{shop.th3}}</th>
+            <td>{{shop.td3}}</td>
+        </tr>
+        <tr>
+            <th>{{shop.th4}}</th>
+            <td>{{shop.td4}}</td>
+        </tr>
+        <tr>
+            <th>{{shop.th5}}</th>
+            <td>{{shop.td5}}</td>
+        </tr>
+
+    </table>
+</div>

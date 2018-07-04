@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CollectionsComponent } from '../collections/collections.component';
 import { AddingserviceService } from '../addingservice.service';
-import { summaryFileName } from '@angular/compiler/src/aot/util';
 @Component({
   selector: 'app-addcart',
   templateUrl: './addcart.component.html',
@@ -10,15 +9,11 @@ import { summaryFileName } from '@angular/compiler/src/aot/util';
 export class AddcartComponent implements OnInit {
   addcart : any;
   total:any;
-  //  sum = 0;
   constructor(private _addingservice: AddingserviceService) {
   }
       ngOnInit() {
        this.addcart = this._addingservice.show;
-      console.log('check',this.addcart);
-      // this.sumOfProducts();
-    this.total=this._addingservice.sumOfProducts();
-      console.log(this.total);
+     this.total=this._addingservice.sumOfProducts();
     }
     add = {
       name: "Hema",
@@ -28,12 +23,6 @@ export class AddcartComponent implements OnInit {
       alert(val);
 
     }
-    // sumOfProducts(){
-    //   let i;
-    //   for(i=0;i<(this.addcart).length;i++){
-    //      this.sum = this.sum + this.addcart[i]['prize'];
-    //   }
-    //   return this.sum;
-    // }
+  
   }
 

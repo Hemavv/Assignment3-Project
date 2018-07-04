@@ -4,7 +4,8 @@
 <div>
     <div *ngFor="let a of arr">
         <div class="d">
-            <img src={{a.image}} width="300" height="210" routerLink={{a.router}} style="cursor:pointer">
+
+            <img src={{a.image}} width="300" height="210" routerLink="/shop" (click)="data(a.image,a.class,a.th1,a.td1,a.th2,a.td2,a.th3,a.td3,a.th4,a.td4,a.th5,a.td5)" style=" cursor:pointer ">
             <div class="text1">
                 <input type="checkbox" (click)="test(a.value,a.prize)" style="text-align: center">{{a.value}}
                 <p class="rupee"><span class="rupee">&#8377;{{a.prize}}</span></p>
@@ -12,5 +13,4 @@
         </div>
     </div>
 </div>
-<input type="button" class="gotocart" value="GO TO CART" [routerLink]="['/addcart']">
-<!-- <button [routerLink]="['/addcart']">GO TO CART</button> -->
+<input type="button" class="gotocart" value="GO TO CART" [routerLink]="[ '/addcart']">
